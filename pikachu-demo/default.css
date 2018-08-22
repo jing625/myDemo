@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::after {
+    box-sizing: border-box;
+}
+
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.code-wrapper {
+    flex: 1;
+    height: 50%;
+    padding: 16px;
+}
+
+.preview-wrapper {
+    flex: 1;
+}
+
+#code {
+    overflow: hidden;
+    height: 100%;
+}
+
+.actions {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.actions>button {
+    padding: 6px 10px;
+    margin: 10px;
+    background: #ddd;
+    border: none;
+}
+
+.actions>button:focus {
+    outline: none;
+}
+
+.actions>button.active {
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+    animation: float 1s ease-in-out infinite;
+}
+
+.end {
+    position: absolute;
+    right: 0;
+    top: 156px;
+    padding: 6px 10px;
+    margin: 10px;
+    background: #ddd;
+    border: none;
+}
+
+.end:focus{
+    outline: none;
+}
+.end.active {
+    box-shadow: 1px 1px 1px 1px rgba(240, 22, 14, 0.8);
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(1px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
