@@ -1,4 +1,4 @@
-var duration = 20
+var duration = 50
 function writeCode (prefix, code, fn) {
   let container = document.querySelector('#code')
   let styleTag = document.querySelector('#styleTag')
@@ -209,7 +209,7 @@ $('.actions').on('click', 'button', function (e) {
             duration = 50
             break;
         case 'fast':
-            duration = 10
+            duration = 1
             break;
     }
 })
